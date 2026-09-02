@@ -1,0 +1,5 @@
+# 构建产物
+cmake-build-*/
+
+# IDE 配置
+.idea/
