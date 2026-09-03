@@ -2,6 +2,7 @@
 // Created by Jianglai on 2026/9/3.
 //
 // 验证直接循环和秦九韶算法的耗时对比
+#include <math.h>
 #include<stdio.h>
 #include<time.h>
 #include<stdlib.h>
@@ -37,7 +38,7 @@ double hornerEval(double coeff[], int n, double x)
 
 int main()
 {
-    int n = 10000;
+    int n = 100;
     double *coeff = (double *)malloc((n+1) * sizeof(double));
     for (int i = 0; i <= n; i++)
     {
@@ -46,27 +47,30 @@ int main()
     double x = 2.5;
 
     clock_t start, end;
-    double result;
+    double result1, result2;
 
     // -- 测试直接循环 ---
     start = clock();
     for (int iter = 0; iter < 100; iter++)
     {
-        result = directEval(coeff, n, x);
+        result1 = directEval(coeff, n, x);
     }
     end = clock();
-    printf("直接循环耗时: %.3f ms\n", (double)(end - start) / CLOCKS_PER_SEC / 100);
-    printf("结果（前几位）:%f\n\n", result);
+    printf("直接循环耗时: %.3fms\n",(double)(end - start) / CLOCKS_PER_SEC * 1000 / 100);
+    printf("结果（前几位）:%f\n\n", result1);
 
     // --测试秦九韶
     start = clock();
     for (int iter = 0; iter < 100; iter++)
     {
-        result = hornerEval(coeff, n, x);
+        result2 = hornerEval(coeff, n, x);
     }
     end = clock();
-    printf("秦九韶算法耗时: %.3f ms\n", (double)(end - start) / CLOCKS_PER_SEC / 100);
-    printf("结果（前几位）:%f\n", result);
+    printf("秦九韶算法耗时: %.3fms\n",(double)(end - start) / CLOCKS_PER_SEC * 1000 / 100);
+    printf("结果（前几位）:%f\n", result2);
+
+    // 验证结果是否一致
+    printf("\n结果差异:%e\n", fabs(result1 - result2));
 
     free(coeff);
     return 0;
