@@ -24,6 +24,7 @@ foreach(SOURCE_FILE ${SOURCES})
             Loop_vs_Recursion/loop_vs_recursion.c
             暑期学校/砍树（二分答案）.c
             "暑期学校/跳石头（二分答案 + 贪心验证）.c"
+            暑期学校/合并果子.c
     )
 
     # 输出到 bin/<目录名>/<文件名>.exe，方便区分各个练习程序
