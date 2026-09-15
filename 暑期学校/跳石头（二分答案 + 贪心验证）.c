@@ -45,7 +45,7 @@ int main()
 
     while (left <= right)
     {
-        int mid = left + (right - left) / 2;
+        int mid = left + (right - left) / 2;   // 假设跳跃的最小距离
 
         if (check(mid)) {
         ans = mid;
