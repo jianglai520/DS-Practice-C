@@ -17,15 +17,14 @@ int check(int mid)
         if (d[i] - last < mid)
         {
             cnt ++;
-        } else
-        {
+        } else {
             last = d[i];
         }
     }
 
     if (L - last < mid)
     {
-        cnt ++;
+        return 0;
     }
 
     return cnt <= M;
@@ -51,8 +50,7 @@ int main()
         if (check(mid)) {
         ans = mid;
         left = mid + 1;
-        } else
-        {
+        } else {
             right = mid - 1;
         }
     }
