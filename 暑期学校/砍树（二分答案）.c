@@ -39,7 +39,7 @@ int main()
         }
         if (total >= M)
         {
-            lo = mid;
+            lo = mid;   // 注意不是 lo = mid + 1
         } else
         {
             hi = mid - 1;
