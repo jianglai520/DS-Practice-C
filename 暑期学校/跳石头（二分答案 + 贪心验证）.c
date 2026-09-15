@@ -24,7 +24,7 @@ int check(int mid)
 
     if (L - last < mid)
     {
-        return 0;
+        cnt ++;
     }
 
     return cnt <= M;
