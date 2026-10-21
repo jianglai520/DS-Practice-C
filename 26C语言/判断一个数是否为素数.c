@@ -7,6 +7,7 @@
 int main()
 {
     int num;
+    printf("请输入一个数字：");
     scanf("%d", &num);
 
     if (num <= 1)
