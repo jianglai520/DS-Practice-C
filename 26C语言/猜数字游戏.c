@@ -4,7 +4,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <time.h>
+
 
 void main()
 
@@ -48,7 +48,7 @@ void main()
         printf("\n您已经猜了%d次，用时%ld秒，没有猜中，正确答案是%d，回答错误！", times, t, number);  // t是long型，注意是ld
     } else
     {
-        printf("\n恭喜您！回答正确。您猜了%d次，用时%dd秒。\n",times, t);
+        printf("\n恭喜您！回答正确。您猜了%d次，用时%d秒。\n",times, t);
     }
 
 }
