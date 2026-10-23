@@ -50,11 +50,10 @@ void infixToPost(char *s, char *post) {  // post输出的后缀字符串， s为
     post[k] = '\0';
 }
 
-
 /* 后缀表达式求值整体思路：
  * 用 int 栈保存操作数：
  * 数字 -> 入栈
- * 运算符 -> 弹两个数 b（后弹/右操作数），a（先谈/左操作数），计算 a op b，结果入栈
+ * 运算符 -> 弹两个数 b（后弹/右操作数），a（先弹/左操作数），计算 a op b，结果入栈
  * 最终栈中的唯一元素就是结果
  */
 int evalPost(char *post) {
@@ -82,7 +81,6 @@ int evalPost(char *post) {
     }
     return num[top];  // 栈顶即结果
 }
-
 
 int main() {
     int N;
