@@ -30,7 +30,7 @@ int check(int m, int n, int seq[])
 
 int main()
 {
-    int m, n, k;  // m 栈的最大容量 n 出栈序列的长度 k 需要检查的出栈序列的个数
+    int m, n, k;  // m 栈的最大容量   n 出栈序列的长度   k 需要检查的出栈序列的个数
     int seq[MAXN];
     scanf("%d %d %d", &m, &n, &k);
 
